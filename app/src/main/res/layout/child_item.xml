@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <!--CardView that holds the elements
+        of the child RecyclerView -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="141dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner">
+
+                <!--Image in the CardView-->
+                <!--Here we have already given
+                the source for the ImageView
+                and we will not assign it
+                in the Java code-->
+                <!--So all the ImageViews will
+                hold the same image-->
+
+                <ImageView
+                    android:id="@+id/img_child_item"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/e1" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/child_item_title"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:paddingStart="5dp"
+                    android:text="Item 1"
+                    android:textColor="@android:color/background_dark"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:button="@drawable/selector"/>
+                
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>
